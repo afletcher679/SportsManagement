@@ -1,7 +1,6 @@
 package org.sports_management
 
-interface Platform {
+
+expect class Platform() {
     val name: String
 }
-
-expect fun getPlatform(): Platform

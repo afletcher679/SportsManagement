@@ -65,6 +65,7 @@ kotlin {
             // When using the BoM, don't specify versions in Firebase dependencies
             implementation(libs.firebase.analytics)
             implementation(libs.firebase.ui.auth)
+            implementation(libs.koin.android)
 
         }
         commonMain.dependencies {
@@ -76,6 +77,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.koin.core)
         }
     }
 }
@@ -109,6 +111,10 @@ android {
 
 dependencies {
     implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
     debugImplementation(compose.uiTooling)
 }
 
