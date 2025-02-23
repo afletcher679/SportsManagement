@@ -4,7 +4,9 @@ import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
-import org.sports_management.dep_inject.appModule
+import org.sports_management.dep_inject.commonModule
+import org.sports_management.dep_inject.getViewModelModule
+import org.sports_management.dep_inject.platformModule
 
 class MainApplication : Application() {
     override fun onCreate() {
@@ -13,7 +15,7 @@ class MainApplication : Application() {
         startKoin {
             androidContext(this@MainApplication)
             androidLogger()
-            modules(appModule())
+            modules(commonModule, platformModule, getViewModelModule())
         }
     }
 }

@@ -8,13 +8,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
-
-    private val greetingViewModel by viewModel<GreetingViewModel>()
+    private val greetingViewModel: GreetingViewModel by viewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContent {
-            App()
+            App(greetingViewModel)
         }
     }
 }
@@ -22,5 +21,5 @@ class MainActivity : ComponentActivity() {
 @Preview
 @Composable
 fun AppAndroidPreview() {
-    App()
+    App(GreetingViewModel(Greeting(Platform())))
 }

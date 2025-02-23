@@ -15,7 +15,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
-fun App() {
+fun App(greetingViewModel: GreetingViewModel ) {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         var userName by remember { mutableStateOf("username") }
@@ -26,7 +26,7 @@ fun App() {
             verticalArrangement = Arrangement.Center
         ) {
 
-            //Text(greeting)
+            Text(greetingViewModel.print())
             OutlinedTextField(
                 value = userName,
                 onValueChange = { userName = it },

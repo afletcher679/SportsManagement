@@ -1,13 +1,6 @@
 package org.sports_management
 
 import androidx.compose.ui.window.ComposeUIViewController
-import kotlinx.cinterop.ExperimentalForeignApi
-import platform.UIKit.UIViewController
+import org.sports_management.dep_inject.ProvideViewModel
 
-@OptIn(ExperimentalForeignApi::class)
-fun ComposeEntryPointWithUIViewController(
-    createUIViewController: () -> UIViewController
-): UIViewController =
-    ComposeUIViewController {
-    App()
-}
+fun ComposeEntryPointWithUIViewController()  = ComposeUIViewController { App(ProvideViewModel.getGreetingViewModel()) }
