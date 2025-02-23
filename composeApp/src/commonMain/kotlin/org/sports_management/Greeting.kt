@@ -1,7 +1,6 @@
 package org.sports_management
 
-class Greeting {
-    private val platform = getPlatform()
+class Greeting(val platform: Platform) {
 
     fun greet(): String {
         return "Hello, ${platform.name}!"

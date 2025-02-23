@@ -26,7 +26,7 @@ fun App() {
             verticalArrangement = Arrangement.Center
         ) {
 
-            Text("Login")
+            Text(greeting)
             OutlinedTextField(
                 value = userName,
                 onValueChange = { userName = it },
