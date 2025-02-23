@@ -28,6 +28,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+            binaryOption("bundleId", "org.sports_management.ComposeApp")
         }
     }
     
@@ -76,7 +77,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation(libs.koin.wasm)
+            implementation(libs.koin.core)
         }
     }
 }
@@ -109,11 +110,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.material3.android)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
     debugImplementation(compose.uiTooling)
 }
 

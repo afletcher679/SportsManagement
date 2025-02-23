@@ -1,7 +1,7 @@
-package org.sports_management
+package org.sports_management.dep_inject
 
 import org.koin.core.context.startKoin
-import org.sports_management.dep_inject.appModule
+
 
 fun initKoin(){
     startKoin {

@@ -1,5 +1,5 @@
 import SwiftUI
-import koinHelper
+import ComposeApp
 
 @main
 struct iOSApp: App {
@@ -12,5 +12,4 @@ struct iOSApp: App {
                 ContentView()
             }
         }
-    }
 }
